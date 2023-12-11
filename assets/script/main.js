@@ -25,12 +25,24 @@ design.addEventListener('dblclick', function() {
 // Button 3
 let and = document.querySelector('a:nth-of-type(3)')
 
-document.addEventListener('keydown', key2) //schrijf 'document' in plaats van de let (naam) want anders werkt de keydown niet goed
+document.addEventListener('keydown', key1) //schrijf 'document' in plaats van de let (naam) want anders werkt de keydown niet goed
 
 // als je eerst de let (naam) schrijft dan werkt het event alleen wanneer je gefocust bent op de functie. Met document hoef je niet gefocust te zijn op de functie.
-  function key2(event) {
-    if (event.key === "2") {
+  function key1(event) {
+    if (event.key === "1") {
       and.classList.toggle("flip");
     }
   }
+
+// Button 4
+// ik maak er nog een met een keydown, want hier zit veel ruimte voor verbetering en herhaling aka iteratief werken
+let dev = document.querySelector('a:nth-of-type(4)')
+
+document.addEventListener('keydown', key2)
+
+function key2(event) {
+  if (event.key === "2") {
+    dev.classList.toggle("flipper");
+  }
+}
 

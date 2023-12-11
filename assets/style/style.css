@@ -91,6 +91,13 @@ a:nth-of-type(12) {
 }
 
 .flip {
+  transition-duration: 1s;
+  transform: 
+    perspective(20em)
+    rotateX(180deg);
+}
+
+.flipper {
   animation-name: flipper;
   animation-timing-function: cubic-bezier(0.28, 0.84, 0.42, 1);
   animation-duration: 0.8s;
@@ -99,15 +106,20 @@ a:nth-of-type(12) {
 
 @keyframes flipper {
   0%{
-    rotate: 0;
+    transform: 
+    perspective(20em)
+    rotateX(0deg);
   }
   50%{
-    rotate: 180deg;
+    transform: 
+    perspective(20em)
+    rotateY(180deg);
   }
   100%{
-    rotate: 0;
-  }
-  
+    transform: 
+    perspective(20em)
+    rotateX(0deg);
+  } 
 }
 
 
