@@ -8,8 +8,18 @@ function jumpHandler() {
 }
 
 
+// Info button
+
+// let info = document.querySelector('a:nth-of-type(21)')
+
+// info.addEventListener('click', infoHandler)
+
+// function infoHandler() {
+//   info.classList.toggle('p')
+// }
+
 // Button 1
-let frontend = document.querySelector('a:nth-of-type(1)')
+let frontend = document.querySelector('a:nth-of-type(2)')
 console.log(frontend); // hierdoor weet je of je script werkt, maar ik begrijp niet goed hoe je dat ziet
 frontend.addEventListener('click', function() {
   frontend.classList.toggle('color-change');
@@ -67,3 +77,25 @@ fix.addEventListener('mouseleave', fixHandler)
   function fixHandler(event) {
     fix.classList.toggle("size-down")
   }
+
+// Button 7
+// wanneer je op de pagina kopieert, dan zal de knop groter worden
+
+let the = document.querySelector('a:nth-of-type(7)')
+
+document.addEventListener('copy', theHandler)
+
+function theHandler(event) {
+  the.classList.toggle('scale-up')
+}
+
+// Button 8
+// wanneer je op de pagina plakt, zal de button kleiner worden
+
+let flow = document.querySelector('a:nth-of-type(8)')
+
+document.addEventListener('paste', flowHandler)
+
+function flowHandler() {
+  flow.classList.toggle('scale-down')
+}
