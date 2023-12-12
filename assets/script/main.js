@@ -27,7 +27,9 @@ let and = document.querySelector('a:nth-of-type(3)')
 
 document.addEventListener('keydown', key1) //schrijf 'document' in plaats van de let (naam) want anders werkt de keydown niet goed
 
+// BELANGRIJK -------------------------------------------------
 // als je eerst de let (naam) schrijft dan werkt het event alleen wanneer je gefocust bent op de functie. Met document hoef je niet gefocust te zijn op de functie.
+// ------------------------------------------------------------
   function key1(event) {
     if (event.key === "1") {
       and.classList.toggle("flip");
@@ -54,4 +56,14 @@ sprint.addEventListener('mouseover', sprintHandler)
 
   function sprintHandler(event) {
     sprint.classList.toggle("bounce");
+  }
+
+  // Button 6
+  // wanneer je je muis van het element afhaald, start de interactie, als je muis dan weer het element in gaat dan reset de interactie
+let fix = document.querySelector('a:nth-of-type(6)')
+
+fix.addEventListener('mouseleave', fixHandler)
+
+  function fixHandler(event) {
+    fix.classList.toggle("size-down")
   }

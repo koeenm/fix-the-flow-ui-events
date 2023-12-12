@@ -81,7 +81,7 @@ a:nth-of-type(12) {
 /* Jouw animaties */
 
 .color-change {
-  background-color: red;
+  background-color: gray;
   transition-duration: 0.3s;
 }
 
@@ -145,6 +145,11 @@ a:nth-of-type(12) {
   100% {
     translate: 0em;
   }
+}
+
+.size-down {
+  scale: 0.5;
+  transition-duration: 3s;
 }
 
 
