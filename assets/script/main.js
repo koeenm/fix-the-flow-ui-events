@@ -46,3 +46,12 @@ function key2(event) {
   }
 }
 
+// Button 5
+// ik ga met hover een animatie laten gebeuren
+let sprint = document.querySelector('a:nth-of-type(5)')
+
+sprint.addEventListener('mouseover', sprintHandler)
+
+  function sprintHandler(event) {
+    sprint.classList.toggle("bounce");
+  }

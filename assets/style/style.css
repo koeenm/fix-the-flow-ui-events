@@ -122,5 +122,30 @@ a:nth-of-type(12) {
   } 
 }
 
+.bounce {
+  animation-name: bounce;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+  animation-timing-function: cubic-bezier(0.28, 0.84, 0.42, 1);
+}
+
+@keyframes bounce {
+  0% {
+    translate: 0 0;
+  }
+
+  10% {
+    translate: 0 .1em;
+  }
+
+  50% {
+    translate: 0 -1em;
+  }
+
+  100% {
+    translate: 0em;
+  }
+}
+
 
 
