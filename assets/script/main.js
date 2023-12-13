@@ -33,12 +33,12 @@ let frontend = document.querySelector('a:nth-of-type(1)')
 console.log(frontend); // hierdoor weet je of je script werkt, maar ik begrijp niet goed hoe je dat ziet
 frontend.addEventListener('click', function() {
   frontend.classList.toggle('color-change');
-  console.log("wadafak");;
+  console.log("wadafak")
 })
 
 // Button 2
 let design = document.querySelector('a:nth-of-type(2)')
-
+// console.log(design)
 design.addEventListener('dblclick', function() {
   design.classList.toggle('scale-up');
 })
@@ -52,7 +52,9 @@ document.addEventListener('keydown', key1) //schrijf 'document' in plaats van de
 // als je eerst de let (naam) schrijft dan werkt het event alleen wanneer je gefocust bent op de functie. Met document hoef je niet gefocust te zijn op de functie.
 // ------------------------------------------------------------
   function key1(event) {
+    // console.log(event.key)
     if (event.key === "1") {
+      // console.log("we hebben een 1")
       and.classList.toggle("flip");
     }
   }

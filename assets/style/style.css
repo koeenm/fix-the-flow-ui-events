@@ -53,6 +53,7 @@ h1 {
   animation-duration: 2s;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
+  /* display: block; */
 }
 
 @keyframes info {
