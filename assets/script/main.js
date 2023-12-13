@@ -10,26 +10,37 @@ function jumpHandler() {
 
 // Info button
 
-// let info = document.querySelector('a:nth-of-type(21)')
+let info = document.querySelector('h1')
 
-// info.addEventListener('click', infoHandler)
+info.addEventListener('click', infoHandler)
 
-// function infoHandler() {
-//   info.classList.toggle('p')
-// }
+function infoHandler() {
+  info.classList.toggle('hulp');
+
+  const popup = document.querySelector('.pop-up');
+  if (info.classList.contains('hulp')) {
+    popup.style.display = "block";
+    popup.classList.toggle("opacity");
+  } else {
+    popup.style.display = "none";
+  }
+}
+
+
 
 // Button 1
-let frontend = document.querySelector('a:nth-of-type(2)')
+let frontend = document.querySelector('a:nth-of-type(1)')
 console.log(frontend); // hierdoor weet je of je script werkt, maar ik begrijp niet goed hoe je dat ziet
 frontend.addEventListener('click', function() {
   frontend.classList.toggle('color-change');
+  console.log("wadafak");;
 })
 
 // Button 2
 let design = document.querySelector('a:nth-of-type(2)')
 
 design.addEventListener('dblclick', function() {
-  design.classList.toggle('scale-up')
+  design.classList.toggle('scale-up');
 })
 
 // Button 3

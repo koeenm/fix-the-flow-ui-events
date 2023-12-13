@@ -21,7 +21,7 @@ body {
 section {
   max-width: 90vw;
 }
-a {
+a, p, h1 {
   display: inline-block;
   margin: 0.2em;
   padding: 0.4em 0.8em;
@@ -32,7 +32,7 @@ a {
   font-weight: normal;
   text-decoration: none;
 }
-a:hover {
+a:hover, p:hover, h1:hover {
   color: var(--primary);
   border-color: var(--primary);
 }
@@ -41,21 +41,37 @@ a:hover {
 
 /* info knop */
 
-p {
-  color: var(--highlight-primary);
-  border: var(--line) solid var(--highlight-primary);
-  border-radius: var(--pill);
-  padding: 1em;
+h1 {
+  display: flex;
+  margin: 0 auto;
+  font-size: 1em;
+  width: 2.25em;
 }
 
-p:hover {
-  color: var(--primary);
-  border-color: var(--primary);
-  cursor: pointer;
+.hulp {
+  animation-name: info;
+  animation-duration: 2s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
 }
 
-.hide {
-  margin-top: -12em;
+@keyframes info {
+  0% {
+    width: 2.25em;
+    height: 2em;
+  }
+  50% {
+    width: 90vw;
+    height: 2em;
+  }
+  100% {
+    width: 90vw;
+    height: 4.5em;
+  }
+}
+
+.pop-up {
+  display: none;
 }
 
 /* Jump animation on the interaction link */
@@ -100,7 +116,7 @@ a:nth-of-type(12) {
 /* Jouw animaties */
 
 .color-change {
-  background-color: gray;
+  background-color: grey;
   transition-duration: 0.3s;
 }
 
@@ -179,3 +195,23 @@ a:nth-of-type(12) {
 
 
 
+
+
+
+.opacity {
+  animation: opacity 2s; /* Adjust duration as needed */
+  transform-style: preserve;
+}
+
+
+@keyframes opacity {
+  0% {
+    opacity: 0;
+  }
+  75% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
